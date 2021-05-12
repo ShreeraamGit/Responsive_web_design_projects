@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        body::after {
+            content: "";
+            background-image: linear-gradient(
+                115deg,
+                rgba(58, 58, 158, 0.8),
+                rgba(136, 136, 206, 0.7)),url(survey.jpg);
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;  
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        #title {
+            text-align: center;
+            z-index: 2;
+            font-family: system-ui;
+            font-size : 18px;
+            padding:10px;
+        }
+
+        .main-content {
+            max-width: 650px;
+            display:flex;
+            flex-direction:column;
+            padding: 40px;
+            margin: 0 auto;
+            margin: bottom 40px;
+            border-radius: 4px;
+            z-index: index 2;
+            position:relative;
+            box-shadow: 0px -1px 10px 5px purple;
+            background-color: rgb(27,27,50,0.9);
+        }
+
+        #name, #email, #number, #options-role, #options-favorite{
+            width: 100%;
+            padding: 7px 7px;
+            height : 35px;
+            margin: 12px 0;
+            display: inline-block;
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size : 19px;
+        }
+        .survey-content {
+            font-family: system-ui;
+            color:white;
+            font-size: 19px;
+        }
+
+        #text-area {
+            width: 100%;
+            padding: 7px 7px;
+            height : 100px;
+            margin: 12px 0;
+            display: inline-block;
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size : 19px;
+            padding-bottom: 70px;
+        }
+
+        .radio {
+            display: block;
+            position: relative;
+            padding-left: 10px;
+            margin-bottom: 0px;
+        }
+        </style>
+
+    </head>
+    <body>
+        <div id = "title">
+            <h1>freeCodeCamp Survey Form</h1>
+            <p><em>Thank you for taking the time to help us improve the platform</em></p>
+        </div>
+        <div class = "main-content">
+            <div class= "survey-content">
+                <form id = "survey-form">
+                    <label for="name-label">First Name</label>
+                    <input type="text" required id="name" name="name" placeholder="Enter your name.">
+                
+                    <label for="email-label">Email</label>
+                    <input type="email" required id="email" name="email-label" placeholder="Enter your Email">
+                    
+        
+                    <label for="number-label">Age(optional)</label>
+                    <input type="number" id="number" name="number" min="1" max="100" placeholder="Age.">
+
+                    <p>Would you recommend freeCodeCamp to a friend?</p>
+                    <label class = "radio" for="definitely">
+                        <input id="definitely" value="definitely" type="radio" name="recommend" checked>Definitely
+                    </label><br>
+
+                    <label class = "radio" for="maybe">
+                        <input id="maybe" value="maybe" type="radio" name="recommend">Maybe
+                    </label> <br>
+                        
+                    <label class = "radio" for="notsure">
+                        <input id="notsure" value="notsure" type="radio" name="recommend">Not Sure
+                    </label><br>
+        
+            
+                    <label for="options-role">Which option best describes your current role?</label>
+                        <select id="options-role" name="options">
+                            <option value="select">Select your Role</option>
+                            <option value="student">Student</option>
+                            <option value="fulltimejob">Full-time Job</option>
+                            <option value="fulltimelearner">Full-time learner</option>
+                            <option value="prefernottosay">Prefer Not to Say</option>
+                        </select>
+
+                    <label for="options-favorite">What is your favorite option of freecodecamp?</label>
+                        <select id="options-favorite" name="options-favorite">
+                            <option value="challenges">Challenges</option>
+                            <option value="projects">Projects</option>
+                            <option value="community">Community</option>
+                            <option value="opensource">Open source</option>
+                        </select>
+                    
+                    <label for="text-area">Any Suggestions.!</label>
+                    <input type="text" required id="text-area" name="text-area" placeholder="Enter your suggestions here.">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
