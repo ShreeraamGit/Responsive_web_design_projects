@@ -9,23 +9,25 @@
                 115deg,
                 rgba(58, 58, 158, 0.8),
                 rgba(136, 136, 206, 0.7)),url(survey.jpg);
-            opacity: 0.5;
+            opacity: 0.;
             top: 0;
             left: 0;
             bottom: 0;
             right: 0;
-            position: absolute;
+            position: fixed;
             z-index: -1;  
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100%;
+            height: 100%;
             }
-        #title {
+        #title , #description{
             text-align: center;
             z-index: 2;
             font-family: system-ui;
-            font-size : 18px;
-            padding:10px;
+        }
+        .title-container {
+            padding:20px;
         }
 
         .main-content {
@@ -42,7 +44,7 @@
             background-color: rgb(27,27,50,0.9);
         }
 
-        #name, #email, #number, #options-role, #options-favorite{
+        #name, #email, #number, #dropdown, #options-favorite{
             width: 100%;
             padding: 7px 7px;
             height : 35px;
@@ -52,15 +54,15 @@
             border-bottom: 2px solid black;
             border-radius: 4px;
             box-sizing: border-box;
-            font-size : 19px;
+            font-size : 17px;
         }
         .survey-content {
             font-family: system-ui;
             color:white;
-            font-size: 19px;
+            font-size: 17px;
         }
 
-        #text-area {
+        #textarea {
             width: 100%;
             padding: 7px 7px;
             height : 100px;
@@ -70,70 +72,120 @@
             border-bottom: 2px solid black;
             border-radius: 4px;
             box-sizing: border-box;
-            font-size : 19px;
+            font-size : 17px;
             padding-bottom: 70px;
         }
 
         .radio {
-            display: block;
-            position: relative;
-            padding-left: 10px;
-            margin-bottom: 0px;
+            display: inline-block;
+            margin-bottom: 1px;
+        }
+        input[type=radio] {
+            height:25px; 
+            width:35px; 
+            vertical-align: middle;
+        }
+        .radio-container {
+            margin-bottom: 20px;
+        }
+        .checkbox-container {
+            margin-bottom: 20px;
+        }
+        .options-role-container {
+            margin-bottom: 20px;
+        }
+        .checkbox {
+            display: inline-block;
+            margin-bottom: 1px;
+        }
+        input[type=checkbox] {
+            height:25px; 
+            width:35px; 
+            vertical-align: middle;
         }
         </style>
 
     </head>
     <body>
-        <div id = "title">
-            <h1>freeCodeCamp Survey Form</h1>
-            <p><em>Thank you for taking the time to help us improve the platform</em></p>
+        <div class = "title-container">
+            <h1 id = "title">freeCodeCamp Survey Form</h1>
+            <p id = "description"><em>Thank you for taking the time to help us improve the platform</em></p>
         </div>
         <div class = "main-content">
             <div class= "survey-content">
                 <form id = "survey-form">
-                    <label for="name-label">First Name</label>
+                    <label id = "name-label" for="name-label">First Name</label>
                     <input type="text" required id="name" name="name" placeholder="Enter your name.">
                 
-                    <label for="email-label">Email</label>
+                    <label id = "email-label" for="email-label">Email</label>
                     <input type="email" required id="email" name="email-label" placeholder="Enter your Email">
                     
         
-                    <label for="number-label">Age(optional)</label>
+                    <label id = "number-label" for="number-label">Age(optional)</label>
                     <input type="number" id="number" name="number" min="1" max="100" placeholder="Age.">
+                    
+                    <div class = "radio-container">
+                        <p>Would you recommend freeCodeCamp to a friend?</p>
+                        <label class = "radio" for="definitely">
+                            <input id="definitely" value="definitely" type="radio" name="recommend" checked>Definitely
+                        </label><br>
 
-                    <p>Would you recommend freeCodeCamp to a friend?</p>
-                    <label class = "radio" for="definitely">
-                        <input id="definitely" value="definitely" type="radio" name="recommend" checked>Definitely
-                    </label><br>
-
-                    <label class = "radio" for="maybe">
-                        <input id="maybe" value="maybe" type="radio" name="recommend">Maybe
-                    </label> <br>
-                        
-                    <label class = "radio" for="notsure">
-                        <input id="notsure" value="notsure" type="radio" name="recommend">Not Sure
-                    </label><br>
+                        <label class = "radio" for="maybe">
+                            <input id="maybe" value="maybe" type="radio" name="recommend">Maybe
+                        </label> <br>
+                            
+                        <label class = "radio" for="notsure">
+                            <input id="notsure" value="notsure" type="radio" name="recommend">Not Sure
+                        </label><br>
+                    </div>
         
-            
-                    <label for="options-role">Which option best describes your current role?</label>
-                        <select id="options-role" name="options">
-                            <option value="select">Select your Role</option>
-                            <option value="student">Student</option>
-                            <option value="fulltimejob">Full-time Job</option>
-                            <option value="fulltimelearner">Full-time learner</option>
-                            <option value="prefernottosay">Prefer Not to Say</option>
-                        </select>
+                    <div class = "options-role-container">
+                        <label for="dropdown">Which option best describes your current role?</label>
+                            <select id="dropdown" name="options">
+                                <option value="select">Select your Role</option>
+                                <option value="student">Student</option>
+                                <option value="fulltimejob">Full-time Job</option>
+                                <option value="fulltimelearner">Full-time learner</option>
+                                <option value="prefernottosay">Prefer Not to Say</option>
+                            </select>
+                    </div>
 
-                    <label for="options-favorite">What is your favorite option of freecodecamp?</label>
-                        <select id="options-favorite" name="options-favorite">
+                    <label for="options-favorite">What is your favorite feature of freecodecamp?</label>
+                        <select id="dropdown" name="options-favorite">
                             <option value="challenges">Challenges</option>
                             <option value="projects">Projects</option>
                             <option value="community">Community</option>
                             <option value="opensource">Open source</option>
                         </select>
-                    
-                    <label for="text-area">Any Suggestions.!</label>
-                    <input type="text" required id="text-area" name="text-area" placeholder="Enter your suggestions here.">
+                    <div class = "checkbox-container">
+                        <p>What would you like to see improved? (Check all that apply)</p>
+                        <label class = "checkbox" for="front-end-projects">
+                            <input id="front-end-projects" value="front-end-projects" type="checkbox" name="improve" checked>Front-end Projects
+                        </label><br>
+        
+                        <label class = "checkbox" for="backend-projects">
+                            <input id="backend-projects" value="backend-projects" type="checkbox" name="improve">Back-end Projects
+                        </label> <br>
+                                
+                        <label class = "checkbox" for="challenges">
+                            <input id="challenges" value="challenges" type="checkbox" name="improve">Challenges
+                        </label><br>
+
+                        <label class = "checkbox" for="open-source-community">
+                            <input id="open-source-community" value="open-source-community" type="checkbox" name="improve">Open-source-community
+                        </label><br>
+
+                        <label class = "checkbox" for="gitter-help">
+                            <input id="gitter-help" value="gitter-help" type="checkbox" name="improve">Gitter help rooms
+                        </label><br>
+
+                        <label class = "checkbox" for="visualization">
+                            <input id="visualization" value="visualization" type="checkbox" name="improve">Visualization
+                        </label><br>
+                    </div>
+
+                    <label for="textarea">Any comments or Suggestions.?</label>
+                    <input type="text" required id="textarea" name="textarea" placeholder="Enter your suggestions here.">
                 </form>
             </div>
         </div>
