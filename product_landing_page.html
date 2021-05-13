@@ -40,7 +40,7 @@
         }
         .submit-btn {
             margin-top: 20px;
-            background-color: #f5be0a;
+            background-color: #f08308;
             border: none;
             color: black;
             padding: 10px 25px;
@@ -52,7 +52,7 @@
             transition-duration: 1s;
         }
         .submit-btn:hover {
-            background-color: #f08308; /* Green */
+            background-color: #816340;
             color:black;
             transition-duration: 1s;
         }
@@ -99,12 +99,28 @@
             color:#070707;
             width: 80px; 
             height: 101px;
-            border: 1px solid
+            border: 1px solid;
+            color: #f08308;
         }
         .video-container {
             text-align: center;
             border: 1px solid;
-            margin-top: 50px;
+            margin-top: 55px;
+        }
+        .price-container {
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid;
+            margin-top: 55px;
+        }
+        .first-price {
+            border: 1px solid;
+            text-align: center;
+        }
+        .first-price-title {
+            border: 1px solid;
+            padding : 0px 50px;
+            background-color:#f08308;
         }
     </style>
 </html>
@@ -157,6 +173,22 @@
     <div class = "video-container">
         <div id = "video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/v=y8Yv4pnO7qc" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class = "price-container">
+        <div class = "first-price">
+            <div class = "first-price-title">
+                <h5>TENOR TROMBONE</h5>
+            </div>
+            <div class = "price-tag">
+                <h2>$600</h2>
+            </div>
+            <div class = "price-description">
+                <p>Lorem ipsum.<p>
+                <p>Lorem ipsum.<p>
+                <p>Lorem ipsum dolor.<p>
+                <p>Lorem ipsum.<p>    
+            </div>
         </div>
     </div>
 </body>
