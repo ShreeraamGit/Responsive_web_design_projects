@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title id ="title">"Original Trombones"</title>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>   
+    </head>
     <style>
         .main {
-            background-color: rgb(195, 199, 199);
+            background-color: rgb(209, 218, 218);
             font-family: system-ui;
         }
         .container{
@@ -17,7 +21,7 @@
             }
         .nav-link{
             margin-right: auto;
-            font-size: 19px;
+            font-size: 17px;
             padding: 5px;
         }
         .intro-form{
@@ -52,10 +56,50 @@
             color:black;
             transition-duration: 1s;
         }
-        .features-container {
-            text-align: left; 
+        .premium-features-container {
+            display: flex;
+            flex-direction: row;
+            border: 5px solid;
+            padding: 10px 230px;
+            justify-content: space-between;
+            width : 90%;
+        }
+        .first-features-container {
+            width: 100%;
+            padding : 0px 50px;
             border: 1px solid;
-            padding: 10px 300px;
+        }
+        .shipping-features-container {
+            display: flex;
+            flex-direction: row;
+            border: 5px solid;
+            padding: 10px 230px;
+            justify-content: space-between;
+            width : 90%;
+        }
+        .second-features-container {
+            width: 100%;
+            padding : 0px 50px;
+            border: 1px solid;
+        }
+        .quality-features-container {
+            display: flex;
+            flex-direction: row;
+            border: 5px solid;
+            padding: 10px 230px;
+            justify-content: space-between;
+            width : 90%;
+        }
+        .third-features-container {
+            width: 100%;
+            padding : 0px 50px;
+            border: 1px solid;
+        }
+        .iconify {
+            color:#070707;
+            width: 80px; 
+            height: 80px;
+            border: 1px solid
         }
     </style>
 </html>
@@ -78,18 +122,31 @@
             <button class = "submit-btn" id = "submit" type="submit"><strong>GET STARTED</strong></button>
         </form>
     </div>
-    <div class = "features-container">
+    <div class = "premium-features-container">
+        <div class = "first-icon-container">
+            <span class="iconify" data-icon="mdi-fire" data-inline="false"></span>
+        </div>
         <div class = "first-features-container">
             <h2>Premium Materials</h2>
             <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        </div>
+    </div>
+    <div class = "shipping-features-container">
+        <div class = "second-icon-container">
+            <span class="iconify" data-icon="fa-solid:shipping-fast" data-inline="false"></span>
         </div>
         <div class = "second-features-container">
             <h2>Fast Shipping</h2>
             <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
         </div>
+    </div>
+    <div class = "quality-features-container">
+        <div class = "third-icon-container">
+            <span class="iconify" data-icon="fa-solid:battery-full" data-inline="false"></span>
+        </div>
         <div class = "third-features-container">
-            <h2>Quality Assurance</h2>
-            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+            <h2>Fast Shipping</h2>
+            <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
         </div>
     </div>
 </body>
