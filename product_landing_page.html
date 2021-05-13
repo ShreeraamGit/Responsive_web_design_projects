@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title id ="title">"Original Trombones"</title>
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>   
     </head>
@@ -60,9 +62,9 @@
             display: flex;
             flex-direction: row;
             border: 5px solid;
-            padding: 10px 230px;
+            padding: 10px 250px;
             justify-content: space-between;
-            width : 90%;
+            width : 70%;
         }
         .first-features-container {
             width: 100%;
@@ -73,9 +75,9 @@
             display: flex;
             flex-direction: row;
             border: 5px solid;
-            padding: 10px 230px;
+            padding: 10px 250px;
             justify-content: space-between;
-            width : 90%;
+            width : 70%;
         }
         .second-features-container {
             width: 100%;
@@ -86,9 +88,9 @@
             display: flex;
             flex-direction: row;
             border: 5px solid;
-            padding: 10px 230px;
+            padding: 10px 250px;
             justify-content: space-between;
-            width : 90%;
+            width : 70%;
         }
         .third-features-container {
             width: 100%;
@@ -112,6 +114,7 @@
             justify-content: space-evenly;
             border: 1px solid;
             margin-top: 55px;
+            padding: 0px 150px
         }
         .first-price {
             border: 1px solid;
@@ -122,6 +125,25 @@
             padding : 0px 50px;
             background-color:#f08308;
         }
+        .select-btn {
+            margin-top: 20px;
+            background-color: #f08308;
+            border: none;
+            color: black;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition-duration: 1s;
+        }
+        .select-btn:hover {
+            background-color: #816340;
+            color:black;
+            transition-duration: 1s;
+        }
+
     </style>
 </html>
 <body class = "main">
@@ -166,19 +188,21 @@
             <span class="iconify" data-icon="fa-solid:battery-full" data-inline="false"></span>
         </div>
         <div class = "third-features-container">
-            <h2>Fast Shipping</h2>
-            <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+            <h2>Quality Assurance</h2>
+            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
         </div>
     </div>
     <div class = "video-container">
         <div id = "video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/v=y8Yv4pnO7qc" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k9mXFaZsgkg" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+
         </div>
     </div>
     <div class = "price-container">
         <div class = "first-price">
             <div class = "first-price-title">
-                <h5>TENOR TROMBONE</h5>
+                <h3>TENOR TROMBONE</h3>
             </div>
             <div class = "price-tag">
                 <h2>$600</h2>
@@ -187,7 +211,44 @@
                 <p>Lorem ipsum.<p>
                 <p>Lorem ipsum.<p>
                 <p>Lorem ipsum dolor.<p>
-                <p>Lorem ipsum.<p>    
+                <p>Lorem ipsum.<p> 
+            </div>
+            <div classs = "price-selected">
+                <button class = "select-btn" id = "elect" type="submit"><strong>SELECT</strong></button>
+            </div>
+        </div>
+        <div class = "first-price">
+            <div class = "first-price-title">
+                <h3>BASS TROMBONE</h3>
+            </div>
+            <div class = "price-tag">
+                <h2>$900</h2>
+            </div>
+            <div class = "price-description">
+                <p>Lorem ipsum.<p>
+                <p>Lorem ipsum.<p>
+                <p>Lorem ipsum dolor.<p>
+                <p>Lorem ipsum.<p> 
+            </div>
+            <div classs = "price-selected">
+                <button class = "select-btn" id = "elect" type="submit"><strong>SELECT</strong></button>
+            </div>
+        </div>
+        <div class = "first-price">
+            <div class = "first-price-title">
+                <h3>VALVE TROMBONE</h3>
+            </div>
+            <div class = "price-tag">
+                <h2>$1200</h2>
+            </div>
+            <div class = "price-description">
+                <p>Lorem ipsum.<p>
+                <p>Lorem ipsum.<p>
+                <p>Lorem ipsum dolor.<p>
+                <p>Lorem ipsum.<p> 
+            </div>
+            <div classs = "price-selected">
+                <button class = "select-btn" id = "elect" type="submit"><strong>SELECT</strong></button>
             </div>
         </div>
     </div>
