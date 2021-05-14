@@ -142,32 +142,18 @@
             transition-duration: 1s;
         }
         .footer {
-            border: 1px solid;
-            background:LightSalmon;
-            padding : 10px;
+            padding:10px 250px;
         }
-        .footer-container {
-            border: 1px solid;
-            display:flex;
-            flex-direction: row;
-            justify-content:flex-end;
-            background:LightSkyBlue;
-            width:95%;
+        .footer-details {
+            padding:10px;
+            width: 100%;
+            text-align: right;
         }
-        .privacy{
-            background:LightSkyBlue;
-            border:1px solid;
-            margin-right: 19px;
-        }
-        .terms{
-            background:LightSalmon;
-            border:1px solid;
+        .privacy,.terms {
             margin-right: 20px;
         }
-        .contact{
-            background:PaleTurquoise;
-            border:1px solid;
-            margin-right: 20px;
+        .contact {
+            margin-right: 3px;
         }
     </style>
 </html>
@@ -283,13 +269,9 @@
             </div>
         </div>
     </div>
-    <footer id = "footer" class = "footer">
-        <div class = "footer-container">
-            <div class = "privacy">Privacy</div>
-            <div class = "terms">Terms and Condtions</div>
-            <div class = "contact">Contact</div>
-        </div>
-        <div class = "copyright">
+    <footer class = "footer" id = "footer">
+        <div class = "footer-details">
+            <a class = "privacy" style="text-decoration:none" href="#">Privacy</a><a class = "terms" style="text-decoration:none" href="#">Terms and Condtions</a><a class = "contact" style="text-decoration:none" href="#">Contact</a><br>
             <p>Copyright 2016, Original Trombones</p>
         </div>
     </footer>
