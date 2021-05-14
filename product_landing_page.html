@@ -109,7 +109,8 @@
             display: flex;
             justify-content: space-evenly;
             margin-top: 55px;
-            padding: 0px 150px
+            padding: 0px 150px;
+            margin-bottom : 55px;
         }
         .first-price {
             border: 1px solid;
@@ -140,7 +141,20 @@
             color:black;
             transition-duration: 1s;
         }
-
+        .footer {
+            padding:10px 250px;
+        }
+        .footer-details {
+            padding:10px;
+            width: 100%;
+            text-align: right;
+        }
+        .privacy,.terms {
+            margin-right: 20px;
+        }
+        .contact {
+            margin-right: 3px;
+        }
     </style>
 </html>
 <body class = "main">
@@ -255,5 +269,10 @@
             </div>
         </div>
     </div>
-    
+    <footer class = "footer" id = "footer">
+        <div class = "footer-details">
+            <a class = "privacy" style="text-decoration:none" href="#">Privacy</a><a class = "terms" style="text-decoration:none" href="#">Terms and Condtions</a><a class = "contact" style="text-decoration:none" href="#">Contact</a><br>
+            <p>Copyright 2016, Original Trombones</p>
+        </div>
+    </footer>
 </body>
