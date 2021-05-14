@@ -11,10 +11,19 @@
             background-color: rgb(209, 218, 218);
             font-family: system-ui;
         }
+        #header {
+            position:fixed;
+            border: 1px solid;
+            padding:10px;
+            background-color:#816340;
+            width:90%
+        }
         .container{
             display: flex;
             flex-direction: row;
             padding: 10px;
+            width:105%;
+            border: 1px solid;
         }
         img {
             width: 30%;
@@ -36,7 +45,11 @@
             padding:40px;
             text-align: center;
             font-family: system-ui;
-
+            border: 1px solid;
+        }
+        .intro{
+            border: 1px solid;
+            margin-top:100px;
         }
         #email {
             width : 20%;
@@ -175,7 +188,9 @@
         </nav>
     </header>
     <div class = "intro-form">
-        <h2>Handcrafted, home-made masterpieces</h2>
+        <div class = "intro">
+            <h2>Handcrafted, home-made masterpieces</h2>
+        </div>
         <form id = "form">
             <label id = "email" for="email-label"></label>
             <input type="email" required id="email" name="email-label" placeholder="Enter your Email address"><br>
