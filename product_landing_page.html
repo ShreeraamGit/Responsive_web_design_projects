@@ -13,22 +13,22 @@
         }
         .header {
             display:flex;
+            background-color: rgb(209, 218, 218);
+            position: fixed;
+            top: 0px;
+            width: 95%;
         }
         .nav-bar li {
-            border-bottom: 1px solid;
             display:inline;
+            background-color: rgb(209, 218, 218);
         }
         .navigation {
             padding:10px;
             width: 100%;
             text-align: right;
         }
-        .features {
-            margin-right: 70px;
-        }
-        .price {
-            margin-left: 70px;
-            margin-right:50px;
+        .nav-link{
+            margin-left: 150px;
         }
         img {
             width: 25%;
@@ -175,19 +175,19 @@
 </html>
 <body class = "main">
     <header id = "header" class = "header">
-        <img class = "logo" src = "https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png">
+        <img id = "header-img" class = "logo" src = "https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png">
         <nav class = "navigation" id = nav-bar>
-            <a href="#features" class = "features">Features</a><a href="#video" class = "working">How it Works</a><a href="#pricing" class = "price">Pricing</a>
+            <a href="#features" class = "nav-link">Features</a><a href="#video" class = "nav-link">How it Works</a><a href="#pricing" class = "nav-link">Pricing</a>
         </nav>
     </header>
     <div class = "intro-form">
         <div class = "intro">
             <h2>Handcrafted, home-made masterpieces</h2>
         </div>
-        <form id = "form">
+        <form id = "form" action="https://www.freecatphotoapp.com/email-sumbit">
             <label id = "email" for="email-label"></label>
-            <input type="email" required id="email" name="email-label" placeholder="Enter your Email address"><br>
-            <button class = "submit-btn" id = "submit" type="submit"><strong>GET STARTED</strong></button>
+            <input type="email" required id="email" placeholder="Enter your Email address"><br>
+            <button class = "submit-btn" type="submit">Get Started</button>
         </form>
     </div>
     <div class = "premium-features-container" id = "features">
@@ -220,8 +220,6 @@
     <div class = "video-container">
         <div id = "video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/k9mXFaZsgkg" frameborder="0" allowfullscreen></iframe>
-      </iframe>
-
         </div>
     </div>
     <div class = "price-container" id = "pricing">
