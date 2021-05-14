@@ -4,31 +4,39 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title id ="title">"Original Trombones"</title>
-        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>   
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <style>
         .main {
             background-color: rgb(209, 218, 218);
             font-family: system-ui;
         }
+        @media (max-width: 650px) {
+        .logo {
+            margin-top: 15px;
+            width: 100%;
+            position: relative;
+            }
+        }
         .header {
             display:flex;
+            background-color: rgb(209, 218, 218);
+            position: fixed;
+            top: 0px;
+            width: 98%;
         }
         .nav-bar li {
-            border-bottom: 1px solid;
             display:inline;
+            background-color: rgb(209, 218, 218);
         }
         .navigation {
             padding:10px;
             width: 100%;
             text-align: right;
         }
-        .features {
-            margin-right: 70px;
-        }
-        .price {
-            margin-left: 70px;
-            margin-right:50px;
+        .nav-link{
+            margin-left: 90px;
         }
         img {
             width: 25%;
@@ -175,19 +183,18 @@
 </html>
 <body class = "main">
     <header id = "header" class = "header">
-        <img class = "logo" src = "https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png">
+        <img id = "header-img" class = "logo" src = "https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png">
         <nav class = "navigation" id = nav-bar>
-            <a href="#features" class = "features">Features</a><a href="#video" class = "working">How it Works</a><a href="#pricing" class = "price">Pricing</a>
+            <a href="#header" class = "nav-link">Home</a><a href="#features" class = "nav-link">Features</a><a href="#video" class = "nav-link">How it Works</a><a href="#pricing" class = "nav-link">Pricing</a>
         </nav>
     </header>
     <div class = "intro-form">
         <div class = "intro">
             <h2>Handcrafted, home-made masterpieces</h2>
         </div>
-        <form id = "form">
-            <label id = "email" for="email-label"></label>
-            <input type="email" required id="email" name="email-label" placeholder="Enter your Email address"><br>
-            <button class = "submit-btn" id = "submit" type="submit"><strong>GET STARTED</strong></button>
+        <form id = "form" action="https://www.freecatphotoapp.com/email-sumbit">
+            <input type="email" required id="email" name = "email" placeholder="Enter your Email address"><br>
+            <input class = "submit-btn" type="submit">
         </form>
     </div>
     <div class = "premium-features-container" id = "features">
@@ -218,11 +225,7 @@
         </div>
     </div>
     <div class = "video-container">
-        <div id = "video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/k9mXFaZsgkg" frameborder="0" allowfullscreen></iframe>
-      </iframe>
-
-        </div>
+        <iframe id="video" height="315" width = "560" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class = "price-container" id = "pricing">
         <div class = "first-price">
